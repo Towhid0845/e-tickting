@@ -1,0 +1,1179 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.dashboard_account_area {
+  .top_title {
+    @include font(38px, 700);
+    margin-bottom: 30px;
+  }
+
+  .user_top_info {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+
+    .left_info {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 80px;
+
+        li {
+          .label {
+            @include font(12px, 400);
+            margin-bottom: 6px;
+          }
+
+          .title {
+            @include font(15px, 600);
+
+            .edit {
+              background-color: transparent;
+              border: 0;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+
+      .home_airport_input {
+        display: flex;
+        gap: 20px;
+
+        .flight_result_after_search_ {
+          li {
+            width: 100%;
+          }
+        }
+
+        input {
+          height: 40px;
+        }
+
+        .close_btn {
+          background-color: transparent;
+          border: 0;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .right_info {
+      .input_groups {
+        .upload_photo {
+          width: 180px;
+          height: 180px;
+          background-color: $primary;
+          border-radius: 50%;
+          color: $white;
+          @include font(96px, 600);
+          border: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+          }
+
+          .icon {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            i {
+              font-size: 14px;
+              width: 42px;
+              height: 42px;
+              background-color: $black;
+              text-align: center;
+              line-height: 40px;
+              border-radius: 50%;
+              color: $white;
+              border: 2px solid $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .user_tab_info {
+    margin-top: 40px;
+
+    .t_title {
+      @include font(22px, 600);
+      margin-bottom: 30px;
+    }
+
+    .inner_t_title {
+      @include font(19px, 600);
+      margin-bottom: 10px;
+    }
+
+    .t_btn {
+      border: 1px solid transparent;
+      border-radius: 6px;
+      padding: 9px 20px;
+      background-color: $black;
+      font-size: 14px;
+      font-weight: 600;
+      color: $white;
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+
+    .nav {
+      border-bottom: 1px solid $border;
+      margin-bottom: 40px !important;
+    }
+
+    .nav-item {
+      margin-right: 40px;
+    }
+
+    .nav-link {
+      padding: 0;
+      @include font(14px, 500);
+      color: $black;
+      border-bottom: 2px solid transparent;
+      border-radius: 0;
+      padding-bottom: 12px;
+    }
+
+    .nav-link.active {
+      background-color: transparent;
+      border-color: $black;
+    }
+
+    .acc_dashboard_item_info {
+
+      .no_trips {
+        padding: 50px 40px;
+
+        .title {
+          @include font(18px, 600);
+          margin-bottom: 14px;
+        }
+
+        .sub_title {
+          @include font(15px, 600);
+          margin-bottom: 24px;
+        }
+
+        .view_trip {
+          @include font(13px, 600);
+          background-color: $black;
+          border-radius: 5px;
+          padding: 10px 14px;
+          color: $white;
+        }
+      }
+    }
+
+    .acc_dashboard_item_info+.acc_dashboard_item_info {
+      margin-top: 40px;
+    }
+
+    .no_search_ {
+      border: 1px solid $border;
+      border-radius: 10px;
+      padding: 40px 20px;
+
+      .title {
+        @include font(26px, 600);
+        margin-bottom: 14px;
+      }
+
+      .sub_title {
+        @include font(15px, 600);
+        margin-bottom: 20px;
+        opacity: 0.6;
+      }
+
+      .search_menus {
+        li {
+          display: inline-block;
+
+          a {
+            @include font(13px, 500);
+            color: #007799;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .trip_recent_search_result {
+      .top_filter {
+        margin-bottom: 20px;
+
+        .select {
+          display: flex;
+          align-items: center;
+
+          h4 {
+            @include font(13px, 400);
+            color: $black;
+          }
+
+          select {
+            width: auto;
+            height: auto;
+            border: 0;
+            @include font(13px, 400);
+            color: $black;
+            background-color: $bg;
+            padding: 5px 14px;
+            border: 1px solid $border;
+            margin-left: 15px;
+            cursor: pointer;
+          }
+        }
+
+        .form-select {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          background-image: none;
+        }
+
+        .delete_all_trip {
+          @include font(13px, 400);
+          color: $black;
+          background-color: transparent;
+          border: 0;
+          text-decoration: underline;
+        }
+      }
+
+      .trip_recent_search_list {
+        ul {
+          border-radius: 10px;
+          border: 1px solid $border;
+          padding: 10px;
+
+          li {
+            border-bottom: 1px solid $border;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+
+            &:last-child {
+              border-bottom: 0;
+              padding-bottom: 0px;
+              margin-bottom: 0px;
+            }
+
+            a {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              column-gap: 60px;
+              row-gap: 10px;
+              width: 100%;
+              color: $black;
+              padding: 12px;
+              border-radius: 8px;
+            }
+
+            .flights {
+              display: flex;
+              align-items: center;
+
+              .icon {
+                flex: 0 0 auto;
+                text-align: left;
+                width: 50px;
+              }
+
+              .flight_title {
+                @include font(16px, 600);
+              }
+            }
+
+            .date_time {
+              span {
+                @include font(14px, 400);
+                color: #647582;
+              }
+            }
+
+            .traveler {
+              span {
+                @include font(13px, 500);
+                color: #647582;
+              }
+            }
+
+            .right_arrow {
+              margin-left: auto;
+            }
+
+            &:hover {
+              a {
+                background-color: $bg;
+              }
+            }
+          }
+        }
+      }
+
+      .show_all_search_history {
+        @include font(14px, 400);
+        color: $black;
+        background-color: transparent;
+        border: 0;
+        text-decoration: underline;
+        margin-top: 30px;
+      }
+    }
+
+    .user_account_info_ {
+      .account_confirm_box {
+        margin-bottom: 30px;
+        padding: 15px;
+
+        i {
+          font-size: 16px;
+        }
+
+        p {
+          @include font(14px, 400);
+
+          a {
+            color: #007799;
+            text-decoration: underline;
+          }
+        }
+
+      }
+
+      .account_info_item {
+        border: 1px solid $border;
+        border-radius: 10px;
+        padding: 30px;
+        padding-right: 0;
+
+        form {
+          .button_groups {
+            button {
+              border: 1px solid $black;
+              border-radius: 6px;
+              padding: 9px 15px;
+              background-color: transparent;
+              @include font(14px, 600);
+              color: $black;
+              margin-right: 5px;
+
+              &:hover {
+                background-color: $black;
+                color: $white;
+              }
+            }
+          }
+        }
+
+        .form_editable_ {
+          .input_groups {
+            position: relative;
+          }
+
+          .edit_btn {
+            position: absolute;
+            top: 56%;
+            right: 15px;
+            background-color: transparent;
+            border: 0;
+            color: #007799;
+            @include font(13px, 600);
+          }
+        }
+
+        .social_info {
+          margin-top: 15px;
+
+          p {
+            @include font(13px, 400);
+          }
+
+          .linked_btn {
+            background-color: #15844b;
+            border-radius: 2px;
+            color: $white;
+            @include font(13px, 600);
+            padding: 8px 10px;
+            margin-top: 10px;
+
+            img {
+              margin-right: 5px;
+            }
+          }
+        }
+
+        .email {
+          @include font(15px, 600);
+          margin-top: 10px;
+        }
+
+        .inner_info_item {
+          padding-top: 26px;
+          margin-top: 26px;
+          border-top: 1px solid $border;
+        }
+
+        .trips_calendar_info {
+          .inner_t_title {
+            @include font(14px, 600);
+            margin-bottom: 5px;
+          }
+
+          .copy_trips_btn {
+            background-color: $bg;
+            @include font(11px, 600);
+            color: $black;
+            border-radius: 3px;
+            padding: 6px 20px;
+
+          }
+
+          .button_groups {
+            margin-top: 24px;
+
+            a {
+              @include font(13px, 600);
+              color: #007799;
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+
+      .pe_also {
+        padding-right: 30px;
+      }
+
+      .form_info {
+        overflow: hidden;
+
+        .image {
+          margin-right: -80px;
+        }
+      }
+
+      p {
+        @include font(13px, 400);
+
+        a {
+          color: $black;
+          text-decoration: underline;
+        }
+      }
+
+      .connect_inbox {
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center right !important;
+        padding: 50px 30px;
+
+        .inner_t_title {
+          @include font(28px, 600);
+          margin-bottom: 24px;
+        }
+      }
+
+      .your_usage_info {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+
+        .left_info {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+        }
+
+        .right_btn {
+          flex-grow: 1;
+        }
+      }
+
+      .personal_info_control {
+
+        .personal_info_control_list {
+          margin-top: 20px;
+          border-top: 1px solid $border;
+          padding-top: 18px;
+          display: flex;
+          gap: 50px;
+          justify-content: space-between;
+
+          &:first-child {
+            border-top: 0;
+          }
+        }
+      }
+
+      .delete_your_account {
+        @include font(15px, 600);
+        color: $black;
+        background-color: $bg;
+        padding: 8px 20px;
+        border-radius: 5px;
+        margin-top: 24px;
+
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
+      }
+
+      .account_info_item+.account_info_item {
+        margin-top: 24px;
+      }
+
+      .preferences_list_and_form {
+        .list_item {
+          margin-top: 30px;
+
+          .l_title {
+            @include font(14px, 600);
+            margin-bottom: 10px
+          }
+
+          .l_subtitle {
+            margin-bottom: 10px
+          }
+
+          .list_tags {
+            img {
+              background-color: $white;
+              border-radius: 4px;
+              width: 28px;
+              padding: 2px;
+              margin-right: 8px;
+            }
+
+            button {
+              margin-right: 5px;
+              font-size: 13px;
+              font-weight: 600;
+              background-color: #192024;
+              border-radius: 5px;
+              padding: 12px 14px;
+              color: #ffffff;
+              border: 0;
+              margin-bottom: 10px;
+
+              i {
+                font-size: 16px;
+                margin-left: 8px;
+              }
+            }
+          }
+        }
+
+        .suggested_item {
+          .l_title {
+            @include font(12px, 400);
+          }
+
+          button {
+            background-color: #e6ebef !important;
+            color: $black !important;
+          }
+        }
+      }
+
+      .account_info_item {
+        .saved_places_ {
+          margin-top: 24px;
+
+          .saved_places_item {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+
+            .left_info {
+              display: flex;
+              gap: 20px;
+              align-items: center;
+
+              .image {
+                border-radius: 5px;
+
+                img {
+                  border-radius: 5px
+                }
+              }
+
+              .text {
+                .place_title {
+                  @include font(14px, 500);
+                }
+
+                .subtitle {
+                  @include font(12px, 400);
+                  color: #5a6872;
+                  margin-top: 4px
+                }
+              }
+            }
+
+            .action {
+              button {
+                background-color: transparent;
+                border: 0;
+                @include font(13px, 600);
+                color: #007799;
+                margin-left: 15px
+              }
+            }
+          }
+
+          .saved_places_item+.saved_places_item {
+            margin-top: 20px;
+            border-top: 1px solid $border;
+            padding-top: 20px
+          }
+        }
+
+        .add_a_place_btn {
+          margin-top: 35px;
+          background-color: transparent;
+          border: 0;
+          @include font(13px, 600);
+          color: #007799;
+        }
+      }
+    }
+  }
+}
+
+.delete_account_page {
+  .delete_title {
+    @include font(24px, 600);
+    margin-bottom: 24px;
+  }
+
+  .button_groups {
+    margin-top: 30px;
+
+    button {
+      @include font(13px, 600);
+      background-color: $black;
+      border-radius: 5px;
+      padding: 12px 14px;
+      color: $white;
+      border: 0;
+      margin-right: 10px;
+    }
+
+    .cancel {
+      background-color: $bg;
+      color: $black;
+
+      &:hover {
+        background-color: #E6EBEF;
+      }
+    }
+  }
+}
+
+.resend_email_box {
+  .rs_title {
+    @include font(22px, 600);
+    margin-bottom: 20px;
+  }
+
+  .not_a_member {
+    a {
+      color: #007799;
+      @include font(13px, 600);
+      margin-left: 10px;
+    }
+  }
+}
+
+.travelers_page_area {
+  .user_name_email {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0;
+
+    .name {
+      width: 52px;
+      height: 52px;
+      background-color: $bg;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 52px;
+      @include font(26px, 600);
+    }
+
+    .email_ {
+      @include font(13px, 400);
+    }
+  }
+
+  .travelers_info_item {
+    border-top: 1px solid $border;
+    padding-top: 24px;
+
+    .info_main {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+
+      .left_info {
+        flex-grow: 1;
+
+        ul {
+          display: flex;
+          gap: 30px;
+          flex-wrap: wrap;
+
+          li {
+            flex: 0 0 30%;
+
+            .title {
+              @include font(14px, 600);
+              margin-bottom: 5px;
+            }
+
+            span {
+              @include font(12px, 400);
+            }
+          }
+        }
+
+        .multiple_item {
+          border-top: 1px dashed $border;
+          padding-top: 18px;
+          margin-top: 18px;
+
+          &:first-child {
+            border-top: 0;
+            padding-top: 0;
+            margin-top: 0;
+          }
+        }
+      }
+
+      .edit_btn {
+        flex: 0 0 auto;
+
+        .edit {
+          background-color: transparent;
+          border: 0;
+          color: #007799;
+          @include font(14px, 600);
+        }
+      }
+    }
+
+    .traveler_edit_info_form {
+      .title_label {
+        color: #00485c;
+        background-color: #e0f8ff;
+        padding: 15px;
+        border-radius: 10px;
+        @include font(13px, 500);
+        margin-bottom: 30px;
+
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .add_reward_programme_form {
+      .inner_t_title {
+        font-size: 14px;
+        margin-bottom: 24px
+      }
+
+      .input_groups {
+        input {
+          height: 40px;
+        }
+
+        select {
+          height: 40px;
+        }
+      }
+
+      .action_btn {
+        button {
+          width: 39px;
+          height: 39px;
+          background-color: #15844b;
+          text-align: center;
+          line-height: 39px;
+          border-radius: 5px;
+          color: $white;
+          border: 0;
+          font-size: 16px;
+        }
+
+        .delete {
+          background-color: red
+        }
+      }
+    }
+
+    .button_groups {
+      button {
+        @include font(13px, 600);
+        background-color: transparent;
+        border: 1px solid $black;
+        border-radius: 5px;
+        padding: 10px 14px;
+        color: $black;
+        margin-right: 10px;
+
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .add_traveller_btn_ {
+    background-color: transparent;
+    border: 0;
+    color: #007799;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+
+  .add_traveller_main_ {
+    margin-top: 30px;
+
+    .add_traveller_list_item {
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
+
+      .left {
+        flex: 0 0 40%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .short_name {
+          span {
+            width: 52px;
+            height: 52px;
+            background-color: $bg;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 52px;
+            @include font(26px, 600);
+          }
+        }
+
+        .info {
+          .title {
+            @include font(15px, 600);
+            margin-bottom: 5px;
+          }
+
+          span {
+            @include font(13px, 400);
+          }
+        }
+      }
+
+      .middle {
+        flex: 0 0 40%;
+
+        .title {
+          @include font(15px, 600);
+          margin-bottom: 10px;
+        }
+
+        ul {
+          li {
+            @include font(12px, 400);
+          }
+        }
+      }
+
+      .right {
+        flex: 0 0 auto;
+
+        button {
+          background-color: transparent;
+          border: 0;
+          color: #007799;
+          font-size: 13px;
+          font-weight: 600;
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .add_traveller_list_item+.add_traveller_list_item {
+      border-top: 1px solid $border;
+      margin-top: 20px;
+      padding-top: 20px;
+    }
+  }
+
+  .add_another_reward_programme {
+    border-top: 1px solid $border;
+    margin-top: 10px;
+    padding-top: 20px;
+
+    button {
+      font-size: 13px;
+      font-weight: 600;
+      background-color: transparent;
+      border: 1px solid #192024;
+      border-radius: 5px;
+      padding: 10px 14px;
+      color: #192024;
+      margin-right: 10px;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+
+  .multiple_reward_add_programme {
+    border-top: 1px solid $border;
+    padding-top: 20px;
+    margin-top: 5px;
+
+    .input_groups {
+      input {
+        height: 40px;
+      }
+
+      select {
+        height: 40px;
+      }
+    }
+
+    .action_btn {
+      button {
+        width: 39px;
+        height: 39px;
+        background-color: #15844b;
+        text-align: center;
+        line-height: 39px;
+        border-radius: 5px;
+        color: $white;
+        border: 0;
+        font-size: 16px;
+      }
+
+      .delete {
+        background-color: red
+      }
+    }
+  }
+
+  .add_a_credit_card {
+    @include font(13px, 600);
+    background-color: transparent;
+    border: 0;
+    color: #007799;
+    margin-top: 20px;
+  }
+
+  .travelers_info_item+.travelers_info_item {
+    margin-top: 24px;
+  }
+}
+
+.price_alerts_list_main {
+  display: flex;
+  gap: 20px;
+
+  .left_info {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-grow: 1;
+
+    .icon {
+      flex: 0 0 auto;
+
+      span {
+        width: 60px;
+        height: 60px;
+        background-color: #5a6872;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          fill: $white;
+          width: 34px;
+          height: 34px;
+        }
+      }
+    }
+
+    .text {
+      .title {
+        @include font(13px, 600);
+        margin-bottom: 16px;
+      }
+
+      .listed_info {
+        li {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          margin-top: 8px;
+
+          b {
+            @include font(13px, 600);
+            width: 60px;
+          }
+
+          small {
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+
+    .actions {
+      align-self: flex-start;
+
+      button {
+        background-color: transparent;
+        border: 0;
+        @include font(13px, 400);
+        margin-left: 18px;
+        opacity: 0.4;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .right_info {
+    flex: 0 0 auto;
+    width: 180px;
+    text-align: center;
+    border-left: 1px solid $border;
+    padding-left: 20px;
+
+    .no_result {
+      .title {
+        @include font(15px, 600);
+        opacity: 0.6;
+      }
+
+      small {
+        font-size: 11px;
+        opacity: 0.6;
+        color: $black;
+        margin-top: 8px;
+      }
+    }
+
+    small {
+      color: #15844b;
+
+      i {
+        font-size: 8px;
+        position: relative;
+        top: -2px;
+      }
+    }
+
+    .price {
+      @include font(20px, 700);
+      margin: 15px 0;
+    }
+
+    .view {
+      @include font(13px, 500);
+      color: $white;
+      background-color: $primary;
+      width: 100%;
+      padding: 6px 10px;
+      text-align: center;
+
+      &:hover {
+        background-color: $black;
+      }
+    }
+  }
+}
+
+.create_price_alert_controller_ {
+  .account_info_item {
+    padding: 0 !important;
+    margin-bottom: 24px;
+
+    .price_alerts_list_main {
+      .left_info {
+        padding: 24px;
+      }
+
+      .right_info {
+        padding: 24px;
+      }
+    }
+  }
+
+  .alerts_ {
+    border-top: 1px solid $border;
+    padding: 12px 24px;
+  }
+}
+
+.email_preferences_notification_controller {
+  .controller_item {
+    border-top: 1px solid $border;
+    padding-top: 20px;
+  }
+}
+
+.trips_notification_controller {
+  margin-top: 35px;
+
+  .controller_item {
+    .text {
+      .inner_t_title {
+        @include font(14px, 700);
+        margin-bottom: 5px;
+
+        span {
+          @include font(14px, 400);
+        }
+      }
+    }
+  }
+
+  .controller_item+.controller_item {
+    margin-top: 24px;
+  }
+}

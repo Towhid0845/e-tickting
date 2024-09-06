@@ -1,0 +1,28 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.right_main_content_ {
+  // flex-grow: 1;
+  transition: $transition;
+  padding-left: 270px;
+  padding-top: 65px;
+
+  .content_area_main {
+    // max-width: 1300px;
+    // width: 100%;
+    // margin: 0 auto;
+    padding: 60px 0;
+    // padding-left: 200px;
+    // padding-right: 200px;
+  }
+}
+
+.collapsed_sidebar {
+  .right_main_content_ {
+    padding-left: 70px;
+  }
+  .footer_area{
+    padding-left: 70px;
+  }
+}

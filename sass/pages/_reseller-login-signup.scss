@@ -1,0 +1,23 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.reseller_login_signup{
+  background-color: #FAFBFC;
+
+  .login-content{
+    margin: 50px 0;
+    border-radius: 10px;
+    background-color: $white;
+    padding: 30px;
+  }
+
+  .reload{
+    width: 40px;
+    height: 40px;
+
+    img{
+      width: 100%;
+    }
+  }
+}

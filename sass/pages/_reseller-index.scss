@@ -1,0 +1,157 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.reseller_index_wrap{
+  position: relative;
+  color: $white;
+
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $black;
+    z-index: -2;
+  }
+
+  .sign_up_in{
+    position: relative;
+
+    &::before{
+      content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 120%;
+    background-image: linear-gradient(180deg,rgba(25,32,36,0.04) 40%,#192024 100%),url("https://content.r9cdn.net/res/images/horizon/ui/business/libs/ft-registration/header.jpg?v=6fe7d3e3cfeb5c91ca7cb2e8522b5f6d648b87cf&cluster=5");
+    background-size: cover;
+    background-position: center;
+    }
+
+  }
+
+  .layout {
+    .title {
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 56px;
+    }
+    h3{
+      font-size: 22px;
+    }
+  .description {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 32px 0 24px;
+    color: $white;
+
+    a{
+      color: $primary;
+    }
+  }
+   .up_btn{
+    background: linear-gradient(135deg,#ff690f 0%,#e8381b 100%);
+    color: $white;
+    padding: 8px 16px ;
+    border-radius: 2px ;
+    border: none;
+    font-weight: 600;
+
+    &:hover{
+      transition-duration: .05s;
+      background: linear-gradient(135deg,#e55e0d 0%,#cf3218 100%);
+    }
+  }
+  } 
+  .video_layout{
+    margin-top: 140px;
+
+    iframe{
+      width: 100%;
+      height: 430px;
+    }
+  }
+  .hr::before {
+    content: '';
+    border-top: calc(2*1px) solid #fff;
+    width: 100%;
+  }
+  .save{
+    .title{
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
+    .description{
+        font-size: 18px;
+        line-height: 28px;
+    }
+  }
+  .plan, .manage{
+    .layout{
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  .travel_detail{
+    .image{
+      width: 100%;
+      height: 335px;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .text .description{
+      margin: 15px 0 20px;
+    }
+  }
+
+  .why_join{
+    .description{
+      margin: 0;
+    }
+
+    .video_layout{
+      margin: 0;
+
+      iframe{
+        height: 300px;
+      }
+    }
+  }
+  .faq{
+    button{ 
+      border-color: transparent !important;
+      box-shadow: unset;
+      
+      &:active{
+        border-color: transparent !important;
+      }
+
+      &:focus{
+        box-shadow: unset;
+      }
+    }
+    .accordion-button::after {
+      background-image: url(../../images/down-arrow.png);
+    }
+
+    .accordion-item:not(:first-child) h2{
+      border-top: 1px solid #878787;
+    }
+  }
+}

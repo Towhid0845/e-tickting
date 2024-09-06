@@ -1,0 +1,30 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.popular_tools_area {
+  .tools_item {
+    display: flex;
+    align-items: center;
+    border: 1px solid $border;
+    padding: 10px;
+    border-radius: 10px;
+    transition: $transition;
+
+    .image {
+      border-radius: 10px;
+      overflow: hidden;
+      width: 80px;
+      margin-right: 15px;
+    }
+    .text{
+      .title{
+        @include font(16px, 600);
+        color: $black;
+      }
+    }
+    &:hover{
+      border-color: $black;
+    }
+  }
+}

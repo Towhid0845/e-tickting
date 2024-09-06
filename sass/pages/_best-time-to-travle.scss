@@ -1,0 +1,453 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.best_time_to_travel_area {
+  margin-bottom: -60px;
+
+  .banner_area {
+    background: url(../images/desktop-hero-image.png) no-repeat;
+    background-position: 50px 0;
+    background-size: contain;
+    // min-height: calc(100vh - 60px);
+    margin: -60px 0;
+    box-shadow: 0 3px 6px rgba(25, 32, 36, 0.16), 0 -1px 4px rgba(25, 32, 36, 0.04);
+    margin-bottom: 80px;
+
+    .banner_info_and_search {
+      padding-top: 180px;
+      padding-bottom: 220px;
+
+      .main_title {
+        @include font(46px, 700);
+        color: $black;
+        margin-bottom: 24px;
+        padding-right: 100px;
+        line-height: 56px;
+      }
+
+      .flight_search_main_ {
+        margin-top: 40px;
+
+        .dates {
+          flex: 1 1 25%;
+          gap: 4px;
+        }
+
+        select {
+          background-color: $bg;
+
+          &:focus {
+            border-color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.methodology_ {
+  background-color: $bg;
+  padding: 60px 0;
+
+  .faq_item {
+    background-color: $white
+  }
+}
+
+.best_time_to_travel_results {
+  .info_item {
+    .text {
+      .top_info {
+        .number {
+          @include font(56px, 700);
+          background-color: $bg;
+          border: 1px solid $border;
+          padding: 12px 20px;
+          width: 100px;
+          text-align: center;
+          border-radius: 5px;
+          display: inline-block;
+          margin-bottom: 30px
+        }
+
+        .title {
+          @include font(36px, 700);
+          color: $black;
+          margin-bottom: 10px;
+          padding-right: 100px;
+          line-height: 46px;
+
+        }
+      }
+
+      .info_box {
+        background-color: #fdf2e2;
+        padding: 30px;
+        border-radius: 10px;
+        margin-top: 30px;
+
+        .inner_subtitle {
+          @include font(15px, 600);
+          color: $black;
+          margin-bottom: 10px;
+        }
+
+        .inner_title {
+          @include font(26px, 600);
+          color: $black;
+          margin-bottom: 20px;
+          line-height: 36px;
+        }
+
+        p+p {
+          margin-top: 15px;
+        }
+
+        .find_flight {
+          background-color: $primary;
+          border-radius: 5px;
+          @include font(13px, 600);
+          color: $white;
+          padding: 12px 24px;
+          margin-top: 20px;
+
+          &:hover {
+            background-color: $black
+          }
+        }
+
+        .icon_ {
+          width: 80px;
+          height: 80px;
+          border-radius: 4px;
+          background-color: $white;
+          flex: 0 0 auto;
+          margin-right: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center
+        }
+
+        .separator+.separator {
+          padding-top: 20px;
+          margin-top: 20px;
+          border-top: 1px solid $black;
+        }
+      }
+
+      .powered_by {
+        @include font(13px, 400);
+        margin-top: 15px;
+
+        .read_more {
+          color: $black;
+          background-color: transparent;
+          border: 0;
+          font-weight: 600;
+          text-decoration: underline;
+        }
+      }
+
+      .filter_area_ {
+        .input_groups {
+          .icon {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            font-size: 18px;
+            opacity: 0.8;
+          }
+
+          input {
+            background-color: $bg;
+          }
+
+          select {
+            padding-left: 50px;
+            background-color: $bg;
+          }
+        }
+
+        .button_groups {
+          button {
+            background-color: $black;
+            color: $white;
+            border: 0;
+            font-size: 18px;
+            width: 50px;
+            height: 48px;
+            text-align: center;
+            line-height: 48px;
+            font-size: 18px;
+            border-radius: 5px;
+          }
+        }
+      }
+
+      .filter_area_step_3 .datepicker {
+        padding-left: 45px;
+      }
+
+    }
+
+    .image {
+      border-radius: 10px;
+      padding-left: 20px;
+
+      img {
+        border-radius: 10px
+      }
+    }
+  }
+
+  .info_item+.info_item {
+    margin-top: 80px
+  }
+
+  .graphical_information {
+    .top_title {
+      @include font(18px, 600);
+      color: $black;
+      margin-bottom: 40px;
+    }
+
+    .tabs_info {
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+
+        .nav-item {
+          background-color: transparent;
+          @include font(18px, 600);
+          color: $black;
+          display: block;
+          width: 50%;
+          display: flex;
+          justify-content: center;
+        }
+
+        .nav-link {
+          background-color: transparent;
+          @include font(18px, 600);
+          color: $black;
+          border-bottom: 4px solid $border;
+          padding-bottom: 15px;
+          width: 100%;
+          border-radius: 0;
+          opacity: 0.6;
+        }
+
+        .nav-link.active {
+          border-color: $black;
+          opacity: 1;
+        }
+      }
+    }
+
+    .tab_info_block_item {
+      border: 1px solid $border;
+      border-radius: 10px;
+      padding: 20px;
+      height: 100%;
+
+      .icon {
+        margin-bottom: 15px;
+      }
+    }
+
+    .live_chart {
+      .cr_title {
+        @include font(18px, 600);
+        margin-bottom: 10px;
+      }
+
+      .cr_subtitle {
+        @include font(13px, 400);
+      }
+
+      p {
+        @include font(13px, 400);
+
+        a {
+          color: #079;
+          text-decoration: underline;
+        }
+      }
+
+      .chart_main {
+        border-radius: 10px;
+        border: 1px solid $border;
+        overflow: hidden;
+        background-color: $bg;
+
+        .chart_top_filter {
+          padding: 40px 40px;
+
+          .filter_area_ {
+            .input_groups {
+              input {
+                background-color: $white;
+              }
+
+              .icon {
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-50%);
+                font-size: 18px;
+                opacity: 0.8;
+              }
+
+              select {
+                padding-left: 50px;
+                background-color: $white;
+              }
+
+              .change_trip_btn {
+                color: $black;
+                border: 0;
+                background-color: transparent;
+                font-size: 14px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 5px;
+                width: 35px;
+                height: 35px;
+                text-align: center;
+                line-height: 35px;
+              }
+            }
+
+            .button_groups {
+              button {
+                background-color: $black;
+                color: $white;
+                border: 0;
+                font-size: 18px;
+                width: 50px;
+                height: 48px;
+                text-align: center;
+                line-height: 48px;
+                font-size: 18px;
+                border-radius: 5px;
+              }
+            }
+          }
+
+          .text {
+            p {
+              @include font(12px, 400);
+              line-height: 20px;
+            }
+          }
+
+          .reset_chart_btn {
+            width: 50px;
+            height: 48px;
+            background-color: $white;
+            text-align: center;
+            line-height: 48px;
+            color: $black;
+            border: 1px solid $border;
+            border-radius: 5px;
+            font-size: 18px;
+
+            &:hover {
+              background-color: $black;
+              border-color: $black;
+              color: $white;
+            }
+          }
+        }
+      }
+
+      .find_flights_ {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        border-top: 1px solid $border;
+        background-color: $white;
+        padding: 20px 30px;
+
+        .find_p {
+          @include font(16px, 400);
+          margin: 0;
+        }
+
+        .find_flight {
+          background-color: $primary;
+          border-radius: 5px;
+          @include font(13px, 600);
+          color: $white;
+          padding: 14px 30px;
+
+          &:hover {
+            background-color: $black;
+          }
+        }
+      }
+    }
+
+    .popularity_in {
+      .pl_title {
+        @include font(18px, 600);
+        color: $black;
+        margin-bottom: 20px;
+      }
+
+      .popularity_info {
+        border: 1px solid $border;
+        border-radius: 10px;
+        padding: 30px;
+
+        ul {
+          display: flex;
+          justify-content: center;
+          gap: 60px;
+          flex-wrap: wrap;
+
+          li {
+            display: inline-block;
+            text-align: center;
+
+            span {
+              display: block;
+              @include font(13px, 400);
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .hotel_price_info {
+    .hp_title {
+      @include font(18px, 600);
+      color: $black;
+      margin-bottom: 20px;
+    }
+
+    .info_block_item {
+      border: 1px solid $border;
+      border-radius: 10px;
+      padding: 20px;
+      height: 100%;
+
+      .icon {
+        margin-bottom: 15px;
+      }
+
+      a {
+        color: #07647e;
+        @include font(14px, 600);
+      }
+    }
+  }
+}

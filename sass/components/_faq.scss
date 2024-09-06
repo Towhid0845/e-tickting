@@ -1,0 +1,26 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.faq_area {
+  .faq_item {
+    padding: 0;
+    .place_name{
+      font-size: 13px !important;
+      font-weight: 500 !important;
+    }
+    p{
+      font-size: 13px !important;
+      line-height: 20px !important;
+      opacity: 0.8;
+    }
+    .main_info{
+      padding: 15px;
+      padding-top: 10px;
+    }
+    .collapse_arrow{
+      cursor: pointer;
+      padding: 15px;
+    }
+  }
+}

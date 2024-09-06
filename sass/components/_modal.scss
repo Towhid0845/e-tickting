@@ -1,0 +1,577 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.modal-header {
+  border: 0;
+  padding: 24px;
+  padding-bottom: 0;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.close_the_modal {
+  background-color: transparent;
+  border: 0;
+  color: $black;
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 9;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $bg;
+  }
+}
+
+// sign in modal
+.sign_in_modal {
+  background-color: rgba(0, 0, 0, 0.2);
+
+  .modal-body {
+    padding: 24px;
+  }
+}
+
+// country change modal
+.country_or_currency_change_modal {
+  .modal-dialog {
+    max-width: 630px;
+  }
+
+  .modal-header {
+    padding-bottom: 30px;
+  }
+
+  .country_or_currency_change_modal_main {
+    .input_groups {
+      .close {
+        background-color: $black;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        color: $white;
+        text-align: center;
+        line-height: 18px;
+        border: 0;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        font-size: 10px;
+      }
+    }
+
+    .list_info {
+      max-height: 600px;
+      overflow-y: scroll;
+
+      .title {
+        @include font(15px, 600);
+        padding-bottom: 20px;
+        border-bottom: 1px solid $border;
+        padding-top: 15px;
+
+        &:first-child {
+          padding-top: 0;
+        }
+      }
+
+      li {
+        button {
+          display: flex;
+          border-radius: 8px;
+          background-color: transparent;
+          padding: 12px 18px;
+          border: 0;
+          width: 100%;
+          border: 1px solid transparent;
+
+          span {
+            @include font(14px, 400);
+          }
+
+          img,
+          svg,
+          small {
+            flex: 0 0 auto;
+            margin-right: 15px;
+            @include font(14px, 400);
+          }
+
+          &:hover {
+            background-color: $bg;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.modal-open {
+  overflow: auto !important;
+  padding-right: 0 !important;
+}
+
+// price alert modal
+.price_alert_modal {
+
+  .price_alert_title {
+    max-width: 390px;
+
+    .title {
+      @include font(17px, 600);
+    }
+
+    .subtitle {
+      @include font(12px, 400);
+      margin-top: 4px;
+    }
+  }
+
+  .price_alert_main {
+    padding: 0 8px;
+
+    .image {
+      border: 1px solid $border;
+
+      .img {
+        background-color: #F3F6F3;
+        // padding: 40px;
+        padding-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 30px;
+        overflow: hidden;
+        // margin-bottom: -100px;
+
+        img {
+          height: 161px;
+          margin-bottom: -100px;
+        }
+      }
+
+      .info {
+        padding: 20px;
+
+        .title {
+          @include font(17px, 600);
+          margin-bottom: 5px;
+        }
+
+        p {
+          @include font(13px, 400);
+        }
+      }
+    }
+
+    .text {
+      .form-check-input {
+        width: 16px;
+        height: 16px
+      }
+
+      .form-check-label {
+        @include font(13px, 400);
+        margin-left: 5px;
+        position: relative;
+        top: 0px;
+      }
+
+      .terms_use {
+        small {
+          @include font(11px, 400);
+
+          a {
+            color: #007799;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// flight share modal
+.flight_share_modal {
+  .modal-header {
+    padding: 0;
+  }
+
+  .close_the_modal {
+    color: #fff;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .modal-content {
+    border-radius: 10px !important;
+    overflow: hidden;
+  }
+
+  .modal-body {
+    padding: 0;
+
+    .img {
+      position: relative;
+      border-radius: 10px;
+      height: 160px;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        span {
+          background-color: $white;
+          @include font(12px, 600);
+          color: $black;
+          padding: 4px 8px;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .text {
+      padding: 24px;
+      padding-top: 0px;
+
+      .title {
+        @include font(20px, 600);
+        margin-bottom: 5px;
+      }
+
+      .subtitle {
+        @include font(12px, 400);
+        margin-bottom: 10px;
+      }
+
+      .price {
+        @include font(16px, 600);
+        margin-bottom: 30px;
+      }
+
+      .share_options {
+        display: flex;
+        align-items: flex-end;
+        gap: 16px;
+
+        input {
+          height: 44px;
+          color: #9ba8b0;
+        }
+
+        button {
+          height: 44px;
+          border-radius: 5px;
+          background-color: transparent;
+          border: 1px solid $black;
+          width: 120px;
+          flex: 0 0 auto;
+          @include font(15px, 500);
+
+          &:hover {
+            background-color: $bg;
+          }
+        }
+      }
+    }
+  }
+}
+
+// beggage size weight modal
+
+.beggage_size_weight_modal {
+  .modal-dialog {
+    max-width: 600px !important;
+  }
+
+  .modal-header {
+    margin-bottom: 15px;
+
+    h4 {
+      @include font(19px, 600);
+    }
+  }
+
+  .modal-body {
+    padding: 24px
+  }
+
+  .info_item {
+    .title {
+      @include font(16px, 600);
+      margin-bottom: 20px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      li {
+        display: flex;
+        padding: 14px 16px;
+        padding-right: 110px;
+        border-radius: 10px;
+        background-color: $bg;
+
+        svg {
+          flex: 0 0 auto;
+          margin-right: 15px;
+        }
+
+        .text {
+          display: flex;
+          align-items: center;
+          column-gap: 20px;
+          justify-content: space-between;
+          flex-grow: 1;
+
+          span {
+            @include font(13px, 400);
+          }
+        }
+      }
+    }
+
+    .visit_a {
+      color: #007799;
+      @include font(13px, 600);
+      margin-top: 8px;
+    }
+  }
+
+  .info_item+.info_item {
+    margin-top: 30px;
+  }
+}
+
+// profile image upload modal
+.profile_image_upload_modal {
+  .top_title {
+    margin-bottom: 10px !important;
+
+    .change_photo_title {
+      @include font(18px, 600);
+    }
+  }
+
+  .modal-body {
+    padding: 24px;
+    padding-top: 15px;
+  }
+
+  .profile_image_upload_main {
+    .upload_main {
+      border-radius: 10px;
+      border: 1px solid $border;
+      padding: 50px 30px;
+      text-align: center;
+
+      label {
+        display: inline-block;
+        background-color: $black;
+        border-radius: 5px;
+        @include font(15px, 600);
+        color: $white;
+        padding: 8px 18px;
+        margin-bottom: 16px;
+        cursor: pointer;
+      }
+
+      h6 {
+        @include font(13px, 400);
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .choose_avatar {
+      @include font(16px, 600);
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    .avatar_slider {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+
+      li {
+        button {
+          text-align: center;
+          padding: 6px;
+          background-color: transparent;
+          border-radius: 5px;
+          border: 0;
+
+          &:hover {
+            background-color: $bg;
+          }
+
+          .img {
+            width: 80px;
+            height: 80px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+              border-radius: 50%;
+            }
+          }
+
+          h5 {
+            @include font(14px, 400);
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// connect your inbox modal
+.connect_your_inbox_modal {
+  .modal-dialog {
+    max-width: 740px;
+  }
+
+  .modal-header {
+    padding-top: 40px
+  }
+
+  .modal-body {
+    padding-bottom: 40px !important;
+  }
+
+  .top_title {
+    .title {
+      @include font(26px, 600);
+    }
+  }
+
+  .modal-body {
+    padding: 24px;
+
+    .button_groups {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+
+      button {
+        background-color: #4285F4;
+        padding: 5px;
+        border-radius: 4px;
+        @include font(13px, 500);
+        color: $white;
+        border: 0;
+        padding-right: 30px;
+
+        img {
+          width: 35px;
+        }
+      }
+
+      .outlook {
+        background-color: #3064B3;
+      }
+    }
+
+    .more_info {
+      p {
+        @include font(12px, 400);
+
+        a {
+          color: #3064B3;
+          text-decoration: underline;
+        }
+      }
+
+      p+p {
+        margin-top: 10px;
+      }
+    }
+
+    .listed_info {
+      margin-top: 30px;
+      border-top: 1px solid $border;
+      padding-top: 30px;
+
+      li {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        .icon {
+          margin-right: 10px;
+          flex: 0 0 auto;
+        }
+
+        .text {
+          .sm_title {
+            @include font(14px, 600);
+            margin-bottom: 4px;
+          }
+
+          p {
+            @include font(12px, 400);
+            line-height: 20px;
+          }
+        }
+      }
+
+      li+li {
+        margin-top: 24px;
+      }
+    }
+  }
+}
+
+// add en email modal
+.add_an_email_modal{
+  .modal-dialog{
+    max-width: 380px
+  }
+  .top_title{
+    .title{
+      @include font(24px, 600);
+    }
+  }
+  .modal-body{
+    padding: 24px;
+  }
+}

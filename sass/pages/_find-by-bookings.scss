@@ -1,0 +1,73 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.find_my_bookings_area {
+  .banner_area {
+    .image {
+      border-radius: 10px;
+      position: relative;
+
+      img {
+        border-radius: 10px;
+      }
+
+      .info {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        max-width: 500px;
+        width: 100%;
+        background-color: $white;
+        padding: 30px 34px;
+        border-radius: 10px;
+
+        .title {
+          @include font(26px, 600);
+          color: $black;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .find_recept_area {
+    margin-top: 80px;
+
+    .find_recept_tabs {
+      .nav {
+        .nav-link {
+          @include font(14px, 500);
+          color: $black;
+          text-transform: uppercase;
+          border-radius: 0;
+          padding: 8px 0;
+          position: relative;
+          background-color: transparent;
+          border-bottom: 2px solid transparent;
+          margin-right: 30px;
+
+        }
+
+        .nav-link.active {
+          color: $primary;
+          border-bottom: 2px solid $primary;
+
+        }
+      }
+    }
+
+    .title {
+      @include font(26px, 600);
+      color: $black;
+      margin-bottom: 10px;
+      margin-bottom: 40px;
+    }
+
+    .square_btn_ {
+      height: 48px;
+      @include font(14px, 500);
+      background-color: $black;
+    }
+  }
+}

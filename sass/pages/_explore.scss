@@ -1,0 +1,169 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.explore_destination_area {
+  .load_more_ {
+    text-align: center;
+    margin-top: 30px;
+
+    .btn_load_more {
+      background-color: $black;
+      @include font(13px, 600);
+      color: $white;
+      border-radius: 5px;
+      padding: 12px 14px;
+    }
+  }
+  .destination_item {
+    background-color: $white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 100%;
+  
+    .image {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  
+    .text {
+      padding: 16px;
+  
+      .country {
+        @include font(13px, 400);
+        line-height: 20px;
+        color: $black;
+      }
+  
+      .net_price {
+        @include font(13px, 600);
+        line-height: 20px;
+        color: $black;
+        margin-top: 8px;
+      }
+  
+      .dst_btm_info {
+        margin-top: 10px;
+        border-top: 1px solid $border;
+        padding-top: 9px;
+  
+        ul {
+          // display: flex;
+          // justify-content: space-between;
+          // gap: 20px;
+  
+          li {
+            @include font(13px, 400);
+            line-height: 20px;
+            color: $black;
+            color: #646464;
+            display: inline-block;
+  
+            &:first-child {
+              margin-right: 26px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.destination_filter_ {
+  width: 240px;
+  padding: 20px;
+  padding-top: 63px;
+  height: calc(100vh - 65px);
+  background-color: $white;
+  border-left: 1px solid $border;
+  overflow-y: auto;
+  scrollbar-width: none;
+  position: fixed;
+  top: 65.5px;
+  right: -240px;
+  transition: $transition;
+  z-index: 99;
+  transition: $transition;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+
+  .filter_close_ {
+    border-bottom: 1px solid $border;
+    margin-bottom: 10px;
+
+    .filter_close_btn {
+      position: absolute;
+      top: 18px;
+      left: 20px;
+      background-color: $black;
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      color: $white;
+      text-align: center;
+      line-height: 30px;
+      border: 0;
+
+      &:hover {
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+
+  .filter_main {
+    .filter_item {
+      border-top: 1px solid $border;
+      margin-bottom: 20px;
+      padding-top: 20px;
+
+      &:first-child {
+        border-top: 0;
+        padding-top: 10px
+      }
+
+      .filter_title {
+        @include font(13px, 700);
+        color: $black;
+        margin-bottom: 15px;
+
+        span {
+          @include font(14px, 400);
+        }
+      }
+
+      .form-check {
+        margin-bottom: 8px
+      }
+
+      .form-check-input {
+        border-radius: 50%
+      }
+
+      .form-check-label {
+        @include font(13px, 400);
+      }
+    }
+  }
+}
+
+.destination_filter_.show {
+  right: 0 !important;
+}
+
+.filter_control_ {
+  .filter_control_btn {
+    background-color: transparent;
+    color: $black;
+    @include font(14px, 500);
+    border: 0;
+    border-radius: 5px;
+    border: 1px solid $black;
+    padding: 4px 12px;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}

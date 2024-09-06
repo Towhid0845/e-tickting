@@ -1,0 +1,545 @@
+@media (max-width: 1899.98px) {
+  .best_time_to_travel_area .banner_area {
+    background-position: 100px 0;
+  }
+  .best_time_to_travel_area .banner_area .banner_info_and_search {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+@media (max-width: 1399.98px) {
+  .control_left_sidebar .left_sidebar_ {
+    width: 70px;
+  }
+  .control_left_sidebar .left_sidebar_ .menu_label {
+    display: none;
+  }
+  .control_left_sidebar .left_sidebar_ .tagname {
+    display: none;
+  }
+  .control_left_sidebar .left_sidebar_:hover {
+    width: 270px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+  .control_left_sidebar .left_sidebar_:hover .menu_label {
+    display: block;
+  }
+  .control_left_sidebar .left_sidebar_:hover .tagname {
+    display: block;
+  }
+  .control_left_sidebar .sidebar_menus_overlay_ {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .control_left_sidebar .visible-overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+  .control_left_sidebar .toggle_left_sidebar {
+    width: 270px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+  .control_left_sidebar .toggle_left_sidebar .menu_label {
+    display: block;
+  }
+  .control_left_sidebar .right_main_content_ {
+    padding-left: 70px;
+  }
+  .control_left_sidebar .footer_area {
+    padding-left: 70px;
+  }
+  .control_left_sidebar .best_time_to_travel_results .info_item .text .top_info .title {
+    font-size: 30px;
+  }
+  .control_left_sidebar .best_time_to_travel_results .info_item .text .info_box .inner_title {
+    font-size: 24px;
+  }
+  .best_time_to_travel_area .banner_area {
+    background-position: 200px 0;
+  }
+  .best_time_to_travel_area .banner_area .banner_info_and_search {
+    padding-top: 110px;
+    padding-bottom: 120px;
+  }
+  .flight_tracker_list_area .top_info .info_item .title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .flight_tracker_list_area .top_info {
+    padding-right: 30px;
+  }
+  .flight_tracker_list_area .flight_tracker_main .flight_tracker_list_ ul li {
+    padding-right: 30px;
+  }
+  .trips_area .trips_banner .text .title {
+    font-size: 36px;
+    line-height: 50px;
+  }
+  .trips_area .trips_banner .text .subtitle {
+    font-size: 16px;
+  }
+  .square_btn_ {
+    font-size: 14px;
+  }
+  .sidebar_menus_overlay_ {
+    display: block !important;
+  }
+}
+@media (max-width: 1199.98px) {
+  .features_area .feature_item {
+    padding: 10px;
+  }
+  .features_area .feature_item .text {
+    margin-top: 10px;
+  }
+  .features_area .feature_item .icon {
+    width: 50px;
+    height: 50px;
+  }
+  .popular_tools_area .tools_item .text .title {
+    font-size: 15px;
+  }
+  .collapsed_sidebar .footer_area {
+    padding-left: 75px;
+  }
+  .explore_destination_area .destination_item .text .net_price {
+    font-size: 12px;
+  }
+  .explore_destination_area .destination_item .text .net_price {
+    margin-top: 4px;
+  }
+  .best_time_to_travel_area .banner_area {
+    background-position: 100px 50px;
+  }
+  .best_time_to_travel_results .info_item .image {
+    padding-left: 0;
+  }
+  .control_left_sidebar .best_time_to_travel_results .info_item .text .top_info .title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .best_time_to_travel_results .info_item .text .info_box {
+    padding: 24px;
+  }
+  .best_time_to_travel_results .graphical_information .live_chart .chart_main .chart_top_filter {
+    padding: 40px 24px;
+  }
+  .flight_tracker_list_area .maps {
+    height: 400px;
+  }
+  .flight_tracker_details .maps {
+    height: 100%;
+  }
+  .trips_area .trips_banner .text .title {
+    font-size: 31px;
+    line-height: 47px;
+  }
+  .trips_area .trips_banner .text .subtitle {
+    font-size: 14px;
+  }
+  .trips_area .trip_plan_area .trip_plan_area_main .right_info {
+    padding-left: 0;
+  }
+  .trips_area .trip_plan_area .trip_plan_area_main .right_info .right_info_item .text {
+    padding-right: 0;
+  }
+  .trips_area .trip_plan_area .trip_plan_area_main .right_info .right_info_item:nth-child(2n) .text {
+    margin-left: 0;
+    padding-right: 0;
+  }
+  .trips_area .trip_plan_area .trip_plan_area_main .right_info .right_info_item .image {
+    margin-left: 0;
+  }
+  .trips_area .trip_plan_area .trip_plan_area_main .left_info .menus ul li a {
+    font-size: 13px;
+    padding: 12px 13px;
+  }
+  .section_title_big .section_title {
+    font-size: 26px;
+    line-height: 42px;
+  }
+  .trips_area .trip_plan_area .trip_plan_area_main .right_info .right_info_item .text .title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 991.98px) {
+  .collapsed_sidebar .right_main_content_ {
+    padding-left: 70px;
+  }
+  .container {
+    --bs-gutter-x: 2.4rem;
+  }
+  .flight_search_main_ {
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+  .flight_search_main_ .origin {
+    flex: 1 1 70%;
+  }
+  .flight_search_main_ .destinations {
+    flex: 1 1 70%;
+  }
+  .flight_search_main_ .button_groups button {
+    width: 58px;
+  }
+  .explore_the_world_area .see_all_btn {
+    padding-bottom: 12px;
+    text-align: left;
+  }
+  .features_area .feature_item {
+    padding: 16px;
+  }
+  .cheap_flights_container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+  .collapsed_sidebar .footer_area {
+    padding-left: 70px;
+  }
+  .flight_search_main_ .dates .input_groups input {
+    padding-left: 50px;
+  }
+  .explore_destination_details_area .right_info {
+    padding-left: 0;
+  }
+  .explore_destination_details_area .right_info {
+    margin-top: 8px;
+  }
+  .best_time_to_travel_area .banner_area {
+    background: none;
+  }
+  .flight_search_main_ .origin {
+    flex: 1 1 40%;
+  }
+  .flight_search_main_ .destinations {
+    flex: 1 1 40%;
+  }
+  .best_time_to_travel_results .info_item .image {
+    margin-top: 30px;
+  }
+  .best_time_to_travel_results .graphical_information .popularity_in .popularity_info ul {
+    gap: 40px;
+  }
+  .best_time_to_travel_results .graphical_information .live_chart .find_flights_ {
+    gap: 20px;
+  }
+  .best_time_to_travel_results .graphical_information .live_chart .find_flights_ .find_p {
+    font-size: 14px;
+  }
+  .find_my_bookings_area .banner_area .image .info {
+    bottom: 10px;
+    left: 10px;
+    padding: 24px 24px;
+  }
+  .find_my_bookings_area .banner_area .image .info .title {
+    font-size: 22px;
+  }
+  .flight_tracker_details .maps {
+    height: 400px;
+  }
+  .trips_area .trip_plan_area .trip_plan_area_main .right_info .right_info_item .text .btn_ {
+    margin-top: 20px;
+  }
+  .trips_area .trip_plan_area .trip_plan_area_main .right_info .right_info_item .image {
+    margin-top: 24px;
+  }
+  .trips_area .trip_plan_area .trip_plan_area_main .right_info .right_info_item {
+    margin-bottom: 60px;
+    display: flex;
+  }
+}
+@media (max-width: 767.98px) {
+  .features_area .feature_item {
+    display: flex;
+  }
+  .features_area .feature_item .icon {
+    flex: 0 0 auto;
+    margin-right: 16px;
+  }
+  .features_area .feature_item .text {
+    margin-top: 0;
+  }
+  .collapsed_sidebar .right_main_content_ {
+    padding-left: 0;
+  }
+  .left_sidebar_ {
+    left: -100%;
+  }
+  .destination_item .text .title {
+    font-size: 15px;
+  }
+  .header_area .right_side .sign_in_btn_ {
+    border: 0;
+    font-size: 13px;
+    padding: 0;
+  }
+  .header_area .right_side .sign_in_btn_:hover {
+    background-color: transparent;
+    color: #192024;
+  }
+  .header_area .right_side .sign_in_btn_ i {
+    font-size: 18px;
+  }
+  .header_area .left_side .sidebar_control_bar_2 .sidebar_control_btn_2 {
+    width: 27px;
+    height: 26px;
+    font-size: 13px;
+  }
+  .collapsed_sidebar .footer_area {
+    padding-left: 0;
+  }
+  .toggle_left_sidebar {
+    left: 0 !important;
+  }
+  .left_sidebar_ {
+    height: calc(100vh - 63px);
+    top: 62.5px;
+    z-index: 999;
+  }
+  .header_area {
+    padding: 16px 0;
+  }
+  .flight_search_area .top_search .search_item {
+    margin-right: 24px;
+  }
+  .filter_control_ .filter_control_btn {
+    margin-bottom: 20px;
+  }
+  .destination_filter_ {
+    height: calc(100vh - 63px);
+    top: 62.5px;
+  }
+  .control_left_sidebar .right_main_content_ {
+    padding-left: 0;
+  }
+  .control_left_sidebar .footer_area {
+    padding-left: 0;
+  }
+  .best_time_to_travel_area .banner_area .banner_info_and_search {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+  .best_time_to_travel_area .banner_area .banner_info_and_search .main_title {
+    font-size: 40px;
+    padding-right: 0;
+    line-height: 56px;
+  }
+  .best_time_to_travel_results .graphical_information .live_chart .find_flights_ {
+    justify-content: center;
+  }
+  .flight_search_main_ .origin {
+    flex: 1 1 80%;
+  }
+  .flight_search_main_ .destinations {
+    flex: 1 1 80%;
+  }
+  .find_my_bookings_area .banner_area .image .info {
+    position: static;
+    padding-left: 0;
+  }
+  .find_my_bookings_area .find_recept_area {
+    margin-top: 30px;
+  }
+  .flight_tracker_area {
+    margin: -62px 0;
+  }
+  .flight_tracker_area .fligh_tracker_main .flight_tracker_form {
+    margin-left: 0;
+  }
+  .flight_tracker_area .btm_info {
+    padding: 24px 0;
+  }
+  .flight_tracker_area .btm_info p {
+    font-size: 13px;
+    line-height: 21px;
+  }
+  .flight_tracker_area .btm_info p {
+    margin-left: 0;
+  }
+  .flight_tracker_list_area {
+    margin: -62px 0;
+  }
+  .flight_tracker_list_area .btm_info_block p {
+    font-size: 13px;
+  }
+  .flight_tracker_list_area .btm_info_block {
+    padding: 24px 0;
+  }
+  .flight_tracker_list_area .flight_tracker_main {
+    padding: 0;
+  }
+  .flight_tracker_list_area .flight_tracker_main .flight_tracker_list_ ul li {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .flight_tracker_list_area .flight_tracker_main .title {
+    padding: 0 20px;
+  }
+  .flight_tracker_list_area .flight_tracker_main .btm_info .change_flight_tracker {
+    padding: 24px 20px;
+  }
+  .flight_tracker_details .details_info .details_info_item .title {
+    margin-left: 0;
+  }
+  .flight_tracker_details .details_info .details_info_item .title {
+    padding: 24px 20px;
+  }
+  .flight_tracker_details .details_info .details_info_item .table > :not(caption) > * > * {
+    padding: 0.5rem 1.3rem;
+  }
+  .flight_tracker_details .btm_info {
+    margin: 20px 20px;
+  }
+  .trips_area {
+    margin-top: -62px;
+  }
+  .trips_area .trip_plan_area .trip_plan_area_main .left_info {
+    position: static;
+  }
+  .trips_area .trip_plan_area .trip_plan_area_main .left_info .menus {
+    margin-bottom: 30px;
+  }
+  .header_area .trip_create_wishlist_sidebar {
+    top: 62.5px;
+  }
+}
+@media (max-width: 575.98px) {
+  .section_title_big .section_title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .flight_search_main_ .dates {
+    flex: 1 1 80%;
+    gap: 4px;
+  }
+  .flight_search_main_ .submit {
+    flex: 0 1 100%;
+  }
+  .flight_search_main_ .dates {
+    flex: 1 1 80%;
+    gap: 4px;
+    flex-direction: column;
+  }
+  .flight_search_main_ .button_groups button {
+    width: 100%;
+  }
+  .flight_result_after_search_ {
+    width: 100%;
+  }
+  .container {
+    --bs-gutter-x: 1.2rem;
+  }
+  .flight_result_after_search_ ul li button .left_info .text .title span {
+    margin-left: 0;
+    display: block;
+  }
+  .flight_result_after_search_ ul li button .left_info .text .title {
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+  .section_title_small .section_title {
+    font-size: 20px;
+  }
+  .footer_area .footer_widget {
+    text-align: center;
+  }
+  .explore_destination_details_area .left_info .explore_details_info_ .title {
+    font-size: 20px;
+  }
+  .explore_destination_details_area .left_info .must_see_image_slider .must_see_slider_main .slider_item .text .img_title {
+    font-size: 14px;
+  }
+  .best_time_to_travel_area .banner_area .banner_info_and_search {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .best_time_to_travel_area .banner_area .banner_info_and_search .main_title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .best_time_to_travel_results .info_item .text .top_info .number {
+    font-size: 53px;
+    padding: 9px 12px;
+    width: 88px;
+  }
+  .best_time_to_travel_results .info_item .text .top_info .title {
+    font-size: 28px;
+    padding-right: 0;
+  }
+  .control_left_sidebar .best_time_to_travel_results .info_item .text .info_box .inner_title {
+    font-size: 22px;
+  }
+  .best_time_to_travel_results .info_item .text .info_box .inner_title {
+    margin-bottom: 12px;
+  }
+  .best_time_to_travel_results .graphical_information .top_title {
+    line-height: 26px;
+  }
+  .control_left_sidebar .best_time_to_travel_results .info_item .text .top_info .title {
+    font-size: 24px;
+  }
+  .find_my_bookings_area .find_recept_area .title {
+    font-size: 22px;
+  }
+  .find_my_bookings_area .find_recept_area .find_recept_tabs .nav .nav-link {
+    margin-right: 24px;
+  }
+  .flight_tracker_area .fligh_tracker_main .flight_tracker_form {
+    padding: 24px;
+  }
+  .flight_tracker_area .fligh_tracker_main .flight_tracker_form .top_info .title {
+    font-size: 20px;
+  }
+  .flight_tracker_area {
+    padding: 77px 0 0 0;
+  }
+  .flight_tracker_area .btm_info {
+    margin-top: 77px;
+  }
+  .flight_tracker_list_area .flight_tracker_main .flight_tracker_list_ ul li .left .text-center {
+    text-align: left !important;
+  }
+  .flight_tracker_list_area .flight_tracker_main .flight_tracker_list_ ul li .right {
+    text-align: left !important;
+    margin-top: 15px;
+  }
+  .flight_tracker_list_area .flight_tracker_main .flight_tracker_list_ ul li .right span {
+    padding: 0 0px;
+    padding-right: 14px;
+    font-size: 13px;
+  }
+  .flight_tracker_list_area .btm_info_block p {
+    line-height: 20px;
+  }
+  .trips_area .trips_banner .text .title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .trips_area .trips_banner .text .subtitle {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .trips_area .trips_banner .buttons_ {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .section_title_big .section_title {
+    font-size: 20px;
+  }
+  .trips_area .trip_plan_area .trip_plan_area_main .right_info .right_info_item .text .title {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

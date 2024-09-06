@@ -1,0 +1,138 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.sign_in_area {
+  .modal-header {
+    .go_back {
+      .go_back_btn {
+        @include font(13px, 500);
+        background-color: transparent;
+        border: 0;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .image {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+
+  .text_content {
+    .title {
+      @include font(18px, 600);
+      margin-bottom: 10px;
+    }
+
+    p {
+      @include font(13px, 400);
+      line-height: 20px;
+    }
+
+    .sign_in_buttons {
+      .btn_ {
+        width: 100%;
+        height: 45px;
+        @include font(15px, 400);
+        color: $white;
+        background-color: $black;
+        border: 1px solid $black;
+        border-radius: 5px;
+        margin-bottom: 8px;
+
+        &:hover {
+          background-color: $primary;
+          border-color: transparent;
+          color: $white;
+        }
+      }
+
+      .continue_with_phone {
+        color: $black;
+        background-color: transparent;
+        border-color: $black;
+
+        &:hover {
+          background-color: $bg;
+          border-color: $black;
+          color: $black;
+        }
+      }
+    }
+
+    .separator {
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid $border;
+      margin: 30px 0;
+
+      span {
+        background-color: $white;
+        @include font(15px, 400);
+        text-transform: uppercase;
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 2px 8px;
+      }
+    }
+
+    .other_sigin_btns {
+      display: flex;
+      gap: 14px;
+
+      .btn_ {
+        width: 100%;
+        height: 45px;
+        @include font(15px, 400);
+        color: $black;
+        background-color: transparent;
+        border: 1px solid $black;
+        border-radius: 5px;
+        margin-bottom: 8px;
+
+        svg {
+          margin-right: 5px;
+        }
+
+        &:hover {
+          background-color: $bg;
+          border-color: $black;
+          color: $black;
+        }
+      }
+
+      .continue_with_phone {
+        color: $black;
+        background-color: transparent;
+        border-color: $black;
+
+        &:hover {
+          background-color: $bg;
+          border-color: $black;
+          color: $black;
+        }
+      }
+    }
+
+    .tearms {
+      margin-top: 8px;
+
+      small {
+        @include font(11px, 400);
+
+        a {
+          color: $primary;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+

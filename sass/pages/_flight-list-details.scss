@@ -1,0 +1,285 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.flight_list_details_area {
+  margin: -60px 0;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  background-color: $bg;
+
+  .left_info {
+    .step_count {
+      margin-bottom: 40px;
+
+      .title {
+        @include font(18px, 600);
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        @include font(12px, 400);
+        color: #5a6872;
+
+        button {
+          background-color: transparent;
+          border: 0;
+          text-decoration: underline;
+          color: #5a6872;
+        }
+      }
+
+      .step_info {
+        margin-top: 20px;
+        background-color: $white;
+        border-radius: 10px;
+        border: 1px solid $border;
+        padding: 20px 16px;
+
+        .st_title {
+          @include font(16px, 600);
+          margin-bottom: 10px;
+        }
+
+        .price {
+          @include font(13px, 400)
+        }
+
+        .listed_info {
+          border-top: 1px solid $border;
+          padding-top: 20px;
+          margin-top: 20px;
+
+          ul {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+
+            li {
+              display: flex;
+              width: 40%;
+
+              .icon {
+                margin-right: 14px;
+              }
+
+              .icon.check {
+                position: relative;
+                left: -1px
+              }
+
+              .text {
+                @include font(13px, 400);
+              }
+
+              .etk_doller {
+                width: 16px;
+                height: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                fill: #fff;
+                border-radius: 12px;
+                background-color: #192024;
+              }
+            }
+          }
+        }
+      }
+
+      .step_book_ticket {
+        margin-top: 20px;
+        background-color: $white;
+        border-radius: 10px;
+
+        ul {
+          li {
+            padding: 24px 20px;
+            border-bottom: 1px solid $border;
+            display: flex;
+            justify-content: space-between;
+
+            .left {
+              display: flex;
+              align-items: center;
+
+              .image {
+                flex: 0 0 auto;
+                margin-right: 20px;
+
+                img {
+                  width: 45px;
+                }
+              }
+
+              .text {
+                .b_title {
+                  @include font(15px, 600);
+                  margin-bottom: 6px;
+                }
+
+                .b_subtitle {
+                  @include font(13px, 400);
+                }
+              }
+            }
+
+            .right {
+              display: flex;
+              align-items: center;
+
+              .prc_title {
+                @include font(16px, 600);
+                margin-right: 20px;
+
+                .info_overlay_ {
+                  font-size: 14px;
+                  position: relative;
+                  top: -1px;
+
+                  &:hover {
+                    .price_breakdown_info {
+                      visibility: visible;
+                      opacity: 1;
+                    }
+                  }
+                }
+              }
+
+              .book_btn {
+                .square_btn_ {
+                  width: 120px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .right_sidebar {
+    margin-top: 28px;
+
+    .top_info {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      justify-content: flex-end;
+
+      .wishlist {
+        .wishlist_btn {
+          background-color: transparent;
+          border: 0;
+          font-size: 20px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      .share_flight {
+        background-color: transparent;
+        border: 0;
+        font-size: 18px;
+      }
+    }
+
+    .main_info {
+      margin-top: 10px;
+      padding: 24px 16px;
+      border-radius: 10px;
+      border: 1px solid $border;
+      background-color: $white;
+
+      .top_title {
+        margin-bottom: 20px;
+
+        .title {
+          @include font(18px, 600);
+          margin-bottom: 6px;
+        }
+
+        .subtitle {
+          @include font(13px, 400);
+        }
+      }
+
+      .info_item {
+        border-radius: 10px;
+        border: 1px solid $border;
+
+        .title {
+          display: flex;
+          gap: 20px;
+          padding: 14px;
+          border-bottom: 1px solid $border;
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+
+          .image {
+            flex: 0 0 auto;
+
+            img {
+              width: 35px;
+            }
+          }
+        }
+
+        .t_title {
+          @include font(14px, 600);
+          margin-bottom: 5px;
+
+          small {
+            @include font(12px, 400)
+          }
+        }
+
+        .t_subtitle {
+          @include font(13px, 400);
+          line-height: 22px;
+        }
+
+        .info {
+          padding: 14px;
+          padding-top: 0;
+
+          .short_info {
+            margin-top: 10px;
+
+            li {
+              @include font(11px, 400);
+              color: #5a6872;
+              margin-bottom: 3px;
+            }
+          }
+
+          .listed_icon {
+            margin-top: 12px;
+
+            li {
+              display: inline-block;
+              margin-right: 10px;
+            }
+          }
+          .middle_block{
+            border-top: 1px solid $border;
+            padding-top: 20px;
+            margin-top: 20px;
+            .tags{
+              background-color: #fff0f0;
+              color: #820d17;
+              @include font(11px, 500);
+              border-radius: 5px;
+              padding: 4px 8px;
+              margin-top: 5px;
+              display: inline-block;
+            }
+          }
+        }
+      }
+
+      .info_item+.info_item {
+        margin-top: 12px;
+      }
+    }
+  }
+}

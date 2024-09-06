@@ -1,0 +1,204 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.input_groups {
+  input {
+    width: 100%;
+    height: 48px;
+    border: 1px solid $border;
+    @include font(14px, 400);
+    border-radius: 5px;
+    padding: 0 15px;
+    transition: $transition;
+
+    &:focus {
+      border-color: $black;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    border: 1px solid $border;
+    @include font(14px, 400);
+    border-radius: 5px;
+    padding: 15px;
+    transition: $transition;
+
+    &:focus {
+      border-color: $black;
+    }
+  }
+
+  select {
+    width: 100%;
+    height: 48px;
+    border: 1px solid $border;
+    @include font(14px, 400);
+    border-radius: 5px;
+    padding: 0 15px;
+    transition: $transition;
+    background-color: transparent;
+
+    &:focus {
+      border-color: $black;
+    }
+  }
+
+  label {
+    color: $black;
+    @include font(13px, 500);
+    margin-bottom: 8px;
+  }
+
+  small {
+    @include font(11px, 500)
+  }
+}
+
+.form-check {
+  .form-check-input {
+    border-radius: 0;
+    cursor: pointer;
+    border-color: $black;
+    border-radius: 3px;
+    width: 18px;
+    height: 18px;
+
+    &:checked {
+      background-color: $black;
+      border-color: $black;
+    }
+  }
+
+  .form-check-label {
+    @include font(13px, 500);
+    color: $black;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.form-check.radio_ {
+  .form-check-input {
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+  }
+
+  .form-check-label {
+    font-weight: 600;
+  }
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.range-slider {
+  width: 100%;
+  position: relative;
+}
+
+.range-slider input[type="range"] {
+  width: 100%;
+  height: 2px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: $black;
+  outline: none;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.range-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: $white;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  border: 1px solid $black;
+}
+
+.range-slider input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: $white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  border: 1px solid $black;
+}
+
+.input_groups {
+  .iti {
+    width: 100%;
+  }
+
+  .iti__country-list {
+    width: 450px;
+  }
+
+  .iti__flag-box,
+  .iti__country-name {
+    font-size: 14px;
+  }
+
+  .iti--separate-dial-code .iti__selected-dial-code {
+    font-size: 14px;
+  }
+}
+
+// form switch
+
+.form_switch_ {
+  .form-check-label {
+    @include font(14px, 500);
+    text-transform: uppercase;
+  }
+
+  .switch {
+    position: relative;
+    height: 1rem;
+    width: 2.4rem;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 9999px;
+    background-color: rgba(100, 116, 139, 0.377);
+    transition: all .3s ease;
+  }
+
+  .switch:checked {
+    background-color: $primary;
+  }
+
+  .switch::before {
+    position: absolute;
+    content: "";
+    left: calc(1.4rem - 1.35rem);
+    top: calc(1.5rem - 1.6rem);
+    display: block;
+    height: 1.2rem;
+    width: 1.2rem;
+    cursor: pointer;
+    border: 1px solid rgba(100, 116, 139, 0.527);
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+    transition: all .3s ease;
+  }
+
+  .switch:checked:before {
+    transform: translateX(100%);
+    border-color: $primary;
+  }
+}

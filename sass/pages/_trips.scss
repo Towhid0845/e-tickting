@@ -1,0 +1,148 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.trips_area {
+  margin-top: -60px;
+
+  .trips_banner {
+    padding: 50px 0;
+    background-color: #FBEDD7;
+
+    .text {
+      .title {
+        @include font(42px, 600);
+        color: $black;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        @include font(18px, 500);
+        color: $black;
+        margin-bottom: 10px;
+        margin: 24px 0 30px 0;
+      }
+    }
+
+    .buttons_ {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      .square_btn_ {
+        padding: 15px 20px;
+      }
+
+      .find_my_booking {
+        background-color: $white;
+        color: $black;
+        border: 1px solid $black;
+
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .trip_plan_area {
+    .trip_plan_area_main {
+      .left_info {
+        position: sticky;
+        top: 80px;
+        .menus {
+          background-color: $bg;
+          padding: 12px;
+          border-radius: 10px;
+
+          ul {
+            li+li {
+              margin-top: 8px;
+            }
+
+            li {
+              a {
+                background-color: $white;
+                @include font(14px, 500);
+                color: $black;
+                padding: 12px 16px;
+                border-radius: 5px;
+                width: 100%;
+                border: 1px solid $border;
+
+                &:hover {
+                  border-color: $black;
+                  color: $white;
+                  background-color: $black;
+                }
+              }
+            }
+
+            li.active {
+              a {
+                border-color: $black;
+                color: $white;
+                background-color: $black;
+              }
+            }
+          }
+        }
+      }
+
+      .right_info {
+        padding-left: 80px;
+
+        .right_info_item {
+          margin-bottom: 100px;
+          display: flex;
+          &:last-child{
+            margin-bottom: 0;
+          }
+
+          .text {
+            padding-right: 80px;
+
+            .title {
+              @include font(24px, 600);
+              color: $black;
+              margin-bottom: 20px;
+            }
+
+            .btn_ {
+              @include font(14px, 500);
+              color: #079;
+              margin-top: 40px;
+            }
+          }
+
+          .image {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background-color: #fbedd7;
+            border-radius: 8px;
+            min-height: 278px;
+            margin-left: 60px;
+          }
+
+          &:nth-child(even) {
+            .row {
+              display: flex;
+              flex-direction: row-reverse;
+            }
+
+            .image {
+              margin-left: 0;
+            }
+
+            .text {
+              margin-left: 60px;
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

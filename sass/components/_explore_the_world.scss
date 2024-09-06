@@ -1,0 +1,86 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.explore_the_world_area {
+  .map {
+    width: 100%;
+
+    iframe {
+      width: 100%;
+      height: 360px;
+    }
+  }
+
+  .see_all_btn {
+    padding-bottom: 34px;
+    text-align: right;
+  }
+
+  .explore_the_world_item {
+    border-top: 1px solid $border;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+    padding: 15px 0;
+    transition: $transition;
+
+    &:hover {
+      background-color: $bg;
+    }
+
+    .item_main {
+      display: flex;
+      align-items: center;
+
+      .image {
+        width: 90px;
+        border-radius: 10px;
+        overflow: hidden;
+        flex: 0 0 auto;
+        margin-right: 16px;
+      }
+
+      .text {
+        color: $black;
+
+        .title {
+          @include font(16px, 600);
+          margin-bottom: 8px;
+        }
+
+        span {
+          display: block;
+        }
+
+        .tagline {
+          @include font(13px, 400);
+          text-transform: uppercase;
+        }
+
+        .price {
+          @include font(15px, 600);
+          line-height: 20px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .wishlist {
+      padding-right: 40px;
+
+      .wishlist_btn {
+        background-color: transparent;
+        border: 0;
+        font-size: 20px;
+        transition: $transition
+      }
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $border;
+      padding-bottom: 12px;
+    }
+  }
+}

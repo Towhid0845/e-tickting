@@ -1,0 +1,70 @@
+@import "../variable/variable";
+@import "../mixin/font";
+@import "../mixin/line-limit";
+
+.flight_tracker_details {
+  .top_info {
+    margin-bottom: 0;
+    background-color: $black;
+    padding-top: 60px;
+
+    .subtitle {
+      color: $white !important;
+      opacity: 1 !important;
+    }
+
+    .title {
+      color: $white !important;
+    }
+  }
+
+  .top_info_label {
+    background-color: #993f06;
+    padding: 10px 20px;
+    padding-right: 80px;
+
+    .title {
+      @include font(13px, 500);
+      color: $white;
+    }
+  }
+
+
+  .details_info {
+    .details_info_item + .details_info_item {
+      margin-top: 0
+    }
+    .details_info_item {
+      .title {
+        @include font(15px, 500);
+        color: $black;
+        margin-bottom: 10px;
+        background-color: $bg;
+        padding: 24px 26px;
+        margin-left: -20px;
+        border-top: 1px solid $border;
+        margin-top: -1px;
+      }
+    }
+  }
+
+  .btm_info {
+    margin: 20px 0;
+  }
+
+  .change_flight_tracker {
+    background-color: $bg;
+    padding: 8px 12px !important;
+    border-radius: 4px;
+    border: 1px solid $border;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    margin-right: 10px;
+
+    &:hover {
+      background-color: $black !important;
+      border-color: $black !important;
+      color: $white !important;
+    }
+  }
+}
